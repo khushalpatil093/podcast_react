@@ -3,6 +3,9 @@
     justify-content: center;
     align-items: center;
     padding: 1.5rem;
+    width: 100vw;
+    position: fixed;
+    top: 0;
   }
   
   .links {

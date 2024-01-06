@@ -6,6 +6,7 @@ import { auth } from "../firebase";
 import { signOut } from "firebase/auth";
 import { toast } from "react-toastify";
 import Loader from "../components/OtherComponents/Loader";
+import User from '../assets/user.svg';
 
 function Profile() {
   const user = useSelector((state) => state.user.user);
@@ -29,10 +30,17 @@ function Profile() {
   return (
     <div>
       <Header />
-      <h1>{user.name}</h1>
-      <h1>{user.email}</h1>
-      <h1>{user.uid}</h1>
-      <Button text={"Logout"} onClick={handleLogout} />
+      <div className="profile">
+        <div className="username">
+          <img src={User} />
+          <h1>{user.name}</h1>
+          <h1>{user.email}</h1>
+          <Button text={"Logout"} onClick={handleLogout} />
+        </div>
+        <div className="">
+    
+        </div>
+      </div>
     </div>
   );
 }
